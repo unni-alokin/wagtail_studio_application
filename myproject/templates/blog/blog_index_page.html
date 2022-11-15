@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog/blog_index_page.css' %}">
+
+
+        <div class="blog-index-container">
+        {% for post in blogpages %}
+            <div class="main-container">  
+                {% with post=post.specific %}
+                    <div class="blog-image-container">
+                        <div class="blog-image-sub-container">
+                            <a href="{% pageurl post %}">
+                                {% with post.main_image as main_image %}
+                                    {% if main_image %}{% image main_image original as tmp_photo%}
+                                        <a href="{% pageurl post %}">
+                                            <img src="{{ tmp_photo.url }}" width="{{ tmp_photo.width }}"
+                                            height="{{ tmp_photo.height }}" alt="{{ tmp_photo.alt }}" class="blog-image">
+                                        </a>
+                                    {% endif %}
+                                {% endwith %}
+                            </a> 
+                        </div>
+                    </div>
+                    <div class="blog-description-main-container">
+                        <div class="blog-description-container">
+                            <div class="blog-title"><a href="{% pageurl post %}">{{ post.blog_title }}</a></div>
+                            <div class="blog-date">{{ post.blog_date }}</div>
+                            <div class="blog-content">
+                                <div class="blog-para">{{ post.blog_description | richtext }}</div>
+                            </div>
+                            <div class="readmore"><a href="{% pageurl post %}">READ THE STORY ></a></div>
+                        </div>
+                    </div>
+                {% endwith %}   
+            </div>
+
+        {% endfor %}
+        </div>
+{% endblock %}

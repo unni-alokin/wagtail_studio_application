@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-blogdetailspage{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog/blog_page.css' %}">
+
+        <!-- <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p> -->
+
+        <div class="breads">
+            <ul class="breadcrumb">
+                <li><a href="{{ page.get_parent.url }}">Blogs</a></li>
+                <li>{{ page.blog_title }}</li>
+              </ul>
+        </div>
+
+        <div class="main-details-container">
+            <div class="blog-title">{{ page.blog_title }}</div>
+
+            <div class="blog-date">{{ page.blog_date }}</div>
+
+            {% for item in page.gallery_images.all %}
+                <div class="card">
+                    {% image item.image original as tmp_photo%}
+                    <img src="{{ tmp_photo.url }}" width="{{ tmp_photo.width }}"
+                    height="{{ tmp_photo.height }}" alt="{{ tmp_photo.alt }}" class="blog-image">
+                </div>
+            {% endfor %}
+            
+            <div class="blog-description">{{ page.blog_description | richtext }}</div>
+
+        </div>
+
+
+{% endblock %}

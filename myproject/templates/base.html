@@ -1,0 +1,87 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+            {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+            {% wagtail_site as current_site %}
+            {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Force all links in the live preview panel to be opened in a new tab #}
+        {% if request.in_preview_panel %}
+        <base target="_blank">
+        {% endif %}
+
+        <link href="https://fonts.cdnfonts.com/css/gotham-book" rel="stylesheet">
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/myproject.css' %}">
+
+        {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+
+        <!-- Navigation menu bar -->
+        <div class="main">
+            <div class = "navbar">
+                    
+                <a href = "" class = "nav-branding">
+                    <img class="brandlogo" src="{% static 'assests/Logo.png'%}" >
+                </a>
+                    
+                <ul class = "nav-menu">
+                        
+                    <li class = "nav-item">
+                        <a href = "{% url 'work' %}" class = "nav-link">WORK</a>
+                    </li>
+                        
+                    <li class = "nav-item">
+                        <a href = "{% url 'blog' %}" class = "nav-link">BLOG</a>
+                    </li>
+                        
+                    <li class = "nav-item">
+                        <a href = "{% url 'about' %}" class = "nav-link">ABOUT</a>
+                    </li>
+                        
+                    <li class = "nav-item">
+                        <a href = "{% url 'contact' %}"  class = "nav-link">CONTACT</a>
+                    </li>
+
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-content-container">
+            {% block content %}{% endblock %}
+        </div>
+
+
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/myproject.js' %}"></script>
+
+        {% block extra_js %}
+        {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

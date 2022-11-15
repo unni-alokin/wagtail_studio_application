@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-contactpages{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact/contactpage.css' %}">
+
+<div class="main-contact-container">
+    
+    <div class="contact-container">
+        <div class="form-container">
+
+            <div class="getintouch">Get in touch</div>
+
+            {% if flag != 1 %}
+                <form action="" method="POST" class="form">
+                    {% csrf_token %}
+                                
+                    <div class="field">
+                        <input class="form-name" type="text" name="Name" 
+                        {% if form.is_bound %}value="{{ form.Name.value }}"{% endif %} 
+                        placeholder="Name *">
+                        
+                        {% for err in form.Name.errors %}
+                            <p class="form_error">{{ form.Name.errors }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field">
+                        <input class="form-email" type="text" name="Email" 
+                        {% if form.is_bound %}value="{{ form.Email.value }}"{% endif %} 
+                        placeholder="Email Address *">
+                        
+                        {% for err in form.Email.errors %}
+                            <p class="form_error">{{ form.Email.errors }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field">
+                        <input class="form-subject" type="text" name="Subject" 
+                        {% if form.is_bound %}value="{{ form.Subject.value }}"{% endif %} 
+                        placeholder="Subject *">
+                        {% for err in form.Subject.errors %}
+                            <p class="error">{{form.Subject.errors}}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field" >
+                        <textarea class="form-message" type="text" name="Message" cols="10" placeholder="Message *">{% if form.is_bound %} {{ form.Message.value }}{% endif %}</textarea>
+                        {% for err in form.Message.errors %}
+                            <p class="error">{{form.Message.errors}}</p>
+                        {% endfor %}
+                    </div>
+
+                    <input type="submit" class="submit">
+
+                </form>
+            {% endif %}
+            {% if flag == 1 %}
+                <div class="success">
+                    <h3>Thank you </h3>
+                    <p>Will get back soon</p>
+                </div>
+            {% endif %}
+
+            
+        </div>
+    </div>
+
+    <div class="snippet-container">
+        <div class="snippets">
+            <div class="heading">Studio</div>
+            <div class="title">General Inquires:</div>
+            <div class="email">hello@thisaddress.com</div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+   <div class="contact-container">
+
+                    <div class="contactus">
+                            <div class="contactus-sub">
+                                <div class="getintouch"><h2>Get in touch</h2></div>
+                                {% if flag != 1 %}
+                                <form action="" method="POST" class="form">
+                                    {% csrf_token %}
+                                    
+                                    <div class="name-field" data-validate="Name is required">
+                                        <input class="form-name" type="text" name="Name" {% if form.is_bound %}value="{{ form.Name.value }}"{% endif %} placeholder="Name">
+                                        <br>
+                                            {% for err in form.Name.errors %}
+                                                <p class="error">please enter your name</small><br>
+                                            {% endfor %}
+                                    </div>
+
+                                    <div class="name-field" data-validate="Name is required">
+                                        <input class="form-email" type="text"name="Email" {% if form.is_bound %}value="{{ form.Email.value }}"{% endif %} placeholder="Email">
+                                        <br>
+                                         {% for err in form.Email.errors %}
+                                            <p class="error">please enter your email</small><br>
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="name-field" data-validate="Name is required">
+                                        <input class="form-subject" type="text" name="Subject" {% if form.is_bound %}value="{{ form.Subject.value }}"{% endif %} placeholder="Subject">
+                                        <br>
+                                        {% for err in form.Subject.errors %}
+                                            <p class="error">please enter a subject</small><br>
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="name-field" data-validate="Name is required">
+                                        <input class="form-message" type="text" name="Message" placeholder="Message" {% if form.is_bound %} value= "{{ form.Message.value }}" {% endif %}></textarea>
+                                        <br>
+                                        {% for err in form.Message.errors %}
+                                            <p class="error">please enter a message</small><br>
+                                        {% endfor %}
+                                    </div>
+
+                                    <input type="submit" class="submit">
+                                </form>
+                                {% endif %}
+                                {% if flag == 1 %}
+                                <div class="success"><h3>Thank you </h3>
+                                                    <p>Will get back soon</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                    
+                    </div>
+
+                    <div class="snippets">
+                        <div class="snippets_container">
+                            <div class="Snippet_heading">Studio</div>
+                                <div class="snippet_contents">
+                                    <div class="title">General Inquires</div>
+                                    <div class="email">hello@thisaddress.com</div>
+                                </div>
+                        </div>
+                    </div>
+
+
+   </div> -->
+
+{% endblock %}

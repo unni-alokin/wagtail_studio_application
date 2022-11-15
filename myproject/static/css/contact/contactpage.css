@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham Book', sans-serif;
+}
+
+.main-contact-container{
+    display: flex;
+}
+
+.contact-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.form-container{
+    width: 80%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.getintouch{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.form{
+    font-size: 14px;
+}
+
+.field{
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.form-name, .form-email, .form-subject, .form-message{
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+    border-width: 0px 0px 1px 0px;
+    border-color: #1C1C1C;
+    resize: vertical;
+    background-color: transparent;
+    font-size: 14px;
+    height: 40px;
+}
+
+:focus {
+    outline: none;
+}
+
+.form-message{
+    height: 100px;
+}
+
+::placeholder{
+    font-size: 14px;
+    padding: 5px 0px 10px 0px;
+    color: #696969;
+}
+
+li{
+    font-size: 12px;
+    color: red;
+}
+
+.submit{
+    margin: 15px 0px 15px 0px;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #696969;
+}
+
+.snippet-container{
+    width: 40%;
+    margin: 60px 40px 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.snippets{
+    width: 80%;
+}
+
+.heading{
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 23px;
+    color: #1C1C1C;
+    padding: 20px 0;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 14px;
+    color: #696969;
+    padding: 10px 0;
+}
+
+.email{
+    font-size: 14px;
+    color: #696969;
+    padding: 10px 0;
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 480px){
+    .main-contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-container{
+        width: 100%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .getintouch{
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    
+    .form{
+        font-size: 10px;
+    }
+    
+    .field{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+
+    .form-name, .form-email, .form-subject, .form-message{
+        width: 100%;
+        margin: 0px;
+        border-width: 0px 0px 1px 0px;
+        border-color: #1C1C1C;
+        resize: vertical;
+        background-color: transparent;
+        font-size: 10px;
+        height: 25px;
+    }
+
+    .form-message{
+        height: 50px;
+    }
+    
+    ::placeholder{
+        font-size: 10px;
+        padding: 5px 0px 5px 0px;
+        color: #696969;
+    }
+    
+    li{
+        font-size: 8px;
+    }
+
+    .submit{
+        margin: 15px 0px 15px 0px;
+        width: 50px;
+        height: 20px;
+        background-color: white;
+        border: 1px solid #696969;
+        font-size: 8px;
+    }
+
+    .snippet-container{
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .snippets{
+        width: 100%;
+    }
+
+    .heading{
+        font-weight: 900;
+        font-size: 10px;
+        line-height: 23px;
+        color: #1C1C1C;
+        padding: 10px 0;
+    }
+
+    .title{
+        font-weight: 900;
+        font-size: 8px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+    .email{
+        font-size: 8px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+}

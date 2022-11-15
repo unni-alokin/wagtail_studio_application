@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.breads{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+ul.breadcrumb {
+    list-style: none;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 13px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 2px;
+    color: black;
+    content: ">>";
+  }
+  ul.breadcrumb li a {
+    color: #000000;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: #696969;
+  }
+
+
+.main-details-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.blog-date{
+    font-size: 12px;
+    font-weight: 100;
+    color: #a1a1a1;
+    letter-spacing: 1.18px;
+    margin-bottom: 20px;
+}
+
+.blog-description{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.blog-image{
+    width: 100%;
+    display: grid;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* tabular view */
+@media screen and (max-width: 950px) {
+
+    
+    .breads{
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 12px;
+    }
+
+    .main-details-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .blog-date{
+        font-size: 12px;
+        font-weight: 100;
+        color: #a1a1a1;
+        margin-bottom: 15px;
+        letter-spacing: 1.18px;
+    }
+    
+    .blog-description{
+        font-size: 12px;
+        margin-bottom: 15px;
+        line-height: 15px;
+    }
+    
+    .blog-image{
+        width: 100%;
+        display: grid;
+        margin-bottom: 15px;
+        height: auto;
+    }
+    
+}
+
+/* Mobile View */
+@media screen and (max-width: 540px) {
+
+    .breads{
+        font-size: 7px;
+        margin-bottom: 10px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 7px;
+    }
+
+    .main-details-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-title{
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .blog-date{
+        font-size: 7px;
+        font-weight: 100;
+        color: #a1a1a1;
+        letter-spacing: 1.18px;
+        margin-bottom: 10px;
+    }
+    
+    .blog-description{
+        font-size: 7px;
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .blog-image{
+        width: 100%;
+        display: grid;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+}
