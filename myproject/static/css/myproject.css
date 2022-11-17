@@ -82,7 +82,7 @@ a{
     padding-bottom: 5px;
     border: 1px solid transparent;
     border-width: 0px 0px 1px 0px;
-    color: black;
+    color: #696969;
 }
 
 .active_work:hover, .active_blog:hover, .active_about:hover, .active_contact:hover{
@@ -90,6 +90,7 @@ a{
     color: #696969;
     border-width: 0px 0px 1px 0px;
     border-color: #696969;
+    border-style: dotted;
 }
 
 
@@ -123,7 +124,7 @@ ul{
 
 /*  Media Query for Mobile Screens */
 
-@media screen and (min-width: 100px) and (max-width: 480px) and (orientation : portrait) {
+@media screen and (min-width: 100px) and (max-width: 480px) {
 
     .main{
         height: 60px;
@@ -176,7 +177,7 @@ ul{
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 40px;
+        top: 60px;
         gap: 0;
         flex-direction: column;
         background-color: rgb(233, 233, 233);
@@ -205,7 +206,7 @@ ul{
 
 
 /* Media Query for ipads and tablest */
-@media screen and (min-width: 481px) and (max-width: 768px) and (orientation : portrait) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
     .navbar{
         height: 80px;
@@ -263,7 +264,7 @@ ul{
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 50px;
+        top: 80px;
         gap: 0;
         flex-direction: column;
         background-color: rgb(233, 233, 233);

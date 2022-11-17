@@ -25,7 +25,7 @@ li{
 
 .success-message li{
     font-size: 20px;
-    color: purple;   
+    color: rgb(12, 110, 95);   
 }
 
 .contact-container{
@@ -59,13 +59,14 @@ li{
 
 .form-name, .form-email, .form-subject, .form-message{
     width: 100%;
+    line-height: 70px;
     margin: 5px 0px 5px 0px;
     border-width: 0px 0px 1px 0px;
     border-color: #1C1C1C;
     resize: vertical;
     background-color: transparent;
     font-size: 14px;
-    height: 40px;
+    height: 60px;
 }
 
 :focus {
@@ -107,6 +108,10 @@ li{
     width: 80%;
 }
 
+.snippet-content{
+    margin-bottom: 10px;
+}
+
 .heading{
     font-weight: 900;
     font-size: 19px;
@@ -128,11 +133,12 @@ li{
     padding: 10px 0;
 }
 
-
-@media screen and (min-width: 100px) and (max-width: 480px){
+/* For Ipads and Tabs */
+@media screen and (min-width: 481px) and (max-width: 712px){
     .main-contact-container{
         display: flex;
         flex-direction: column;
+        margin-top: 70px;
     }
 
     .contact-container{
@@ -146,112 +152,8 @@ li{
     .getintouch{
         font-size: 15px;
         font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .success-message li{
-        font-size: 15px;
-        color: purple;   
-    }
-    
-    .form{
-        font-size: 10px;
-    }
-    
-    .field{
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-
-    .form-name, .form-email, .form-subject, .form-message{
-        width: 100%;
-        margin: 0px;
-        border-width: 0px 0px 1px 0px;
-        border-color: #1C1C1C;
-        resize: vertical;
-        background-color: transparent;
-        font-size: 10px;
-        height: 25px;
-    }
-
-    .form-message{
-        height: 50px;
-    }
-    
-    ::placeholder{
-        font-size: 10px;
-        padding: 5px 0px 5px 0px;
-        color: #696969;
-    }
-    
-    li{
-        font-size: 8px;
-    }
-
-    .submit{
-        margin: 15px 0px 15px 0px;
-        width: 50px;
-        height: 20px;
-        background-color: white;
-        border: 1px solid #696969;
-        font-size: 8px;
-    }
-
-    .snippet-container{
-        width: 100%;
-        margin: 0px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .snippets{
-        width: 100%;
-    }
-
-    .heading{
-        font-weight: 900;
-        font-size: 10px;
-        line-height: 23px;
-        color: #1C1C1C;
-        padding: 10px 0;
-    }
-
-    .title{
-        font-weight: 900;
-        font-size: 8px;
-        color: #696969;
-        padding: 4px 0;
-    }
-
-    .email{
-        font-size: 8px;
-        color: #696969;
-        padding: 4px 0;
-    }
-
-}
-
-
-@media screen and (min-width: 100px) and (max-width: 480px){
-    .main-contact-container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact-container{
-        width: 100%;
-    }
-
-    .form-container{
-        width: 100%;
-    }
-
-    .getintouch{
-        font-size: 15px;
-        font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        text-align: center;
     }
     
     .success-message li{
@@ -260,14 +162,16 @@ li{
     }
 
     .form{
-        font-size: 10px;
+        padding: 0px 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .field{
         width: 100%;
         margin-bottom: 5px;
     }
-
 
     .form-name, .form-email, .form-subject, .form-message{
         width: 100%;
@@ -277,6 +181,130 @@ li{
         resize: vertical;
         background-color: transparent;
         font-size: 10px;
+        padding: 30px 0px;
+        height: 25px;
+    }
+
+    .form-message{
+        height: 50px;
+    }
+    
+    ::placeholder{
+        font-size: 12px;
+        padding: 5px 0px 5px 0px;
+        color: #696969;
+    }
+    
+    li{
+        font-size: 8px;
+    }
+
+    .submit{
+        margin: 35px 0px 35px 0px;
+        width: 100px;
+        height: 40px;
+        background-color: white;
+        border: 1px solid #696969;
+        font-size: 12px;
+    }
+
+    .snippet-container{
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .snippets{
+        margin: 40px 0px 40px 0px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .snippet-content{
+        margin-bottom: 10px;
+    }
+
+    .heading{
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 23px;
+        color: #1C1C1C;
+        padding: 10px 0;
+    }
+
+    .title{
+        font-weight: 900;
+        font-size: 10px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+    .email{
+        font-size: 10px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+}
+
+
+
+
+
+
+/* Mobile screen */
+@media screen and (min-width: 100px) and (max-width: 480px){
+    .main-contact-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .contact-container{
+        width: 100%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .getintouch{
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .success-message li{
+        font-size: 15px;
+        color: rgb(56, 114, 30);   
+    }
+
+    .form{
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .field{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .form-name, .form-email, .form-subject, .form-message{
+        width: 100%;
+        margin: 0px;
+        border-width: 0px 0px 1px 0px;
+        border-color: #1C1C1C;
+        resize: vertical;
+        background-color: transparent;
+        font-size: 10px;
+        padding: 20px 0px;
         height: 25px;
     }
 
@@ -296,8 +324,8 @@ li{
 
     .submit{
         margin: 15px 0px 15px 0px;
-        width: 50px;
-        height: 20px;
+        width: 60px;
+        height: 30px;
         background-color: white;
         border: 1px solid #696969;
         font-size: 8px;
@@ -312,12 +340,20 @@ li{
     }
 
     .snippets{
-        width: 100%;
+        margin: 20px 0px 20px 0px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .snippet-content{
+        margin: 5px 0px;
     }
 
     .heading{
         font-weight: 900;
-        font-size: 10px;
+        font-size: 14px;
         line-height: 23px;
         color: #1C1C1C;
         padding: 10px 0;
@@ -325,13 +361,13 @@ li{
 
     .title{
         font-weight: 900;
-        font-size: 8px;
+        font-size: 10px;
         color: #696969;
         padding: 4px 0;
     }
 
     .email{
-        font-size: 8px;
+        font-size: 10px;
         color: #696969;
         padding: 4px 0;
     }

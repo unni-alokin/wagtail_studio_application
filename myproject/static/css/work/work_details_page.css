@@ -4,31 +4,42 @@
     padding: 0;
 }
 
-
 .breads{
-    font-size: 13px;
     margin-bottom: 10px;
 }
 
 ul.breadcrumb {
     list-style: none;
+    font-size: 14px;
 }
 ul.breadcrumb li {
     display: inline;
-    font-size: 13px;
+    font-size: 14px;
 }
+
 ul.breadcrumb li+li:before {
     padding: 2px;
     color: black;
     content: ">";
+    font-size: 14px;
 }
+
+ul.breadcrumb li+li:before {
+    padding: 2px;
+    color: black;
+    content: ">";
+    font-size: 14px;
+}
+
 ul.breadcrumb li a {
     color: #000000;
     text-decoration: none;
 }
+
 ul.breadcrumb li a:hover {
     color: #696969;
 }
+
 .selected{
     color: #1C1C1C;
 }
@@ -109,18 +120,17 @@ ul.breadcrumb li a:hover {
 /* for Mobiles */
 @media screen and (min-width: 100px) and (max-width: 480px) and (orientation : portrait) {
 
-    .goback{
+
+    .breads ul.breadcrumb li{
         font-size: 8px;
     }
 
-    .breads{
+    ul.breadcrumb li+li:before {
+        padding: 2px;
+        color: black;
+        content: ">";
         font-size: 8px;
     }
-
-    ul.breadcrumb li {
-        font-size: 8px;
-    }
-    
     
     .image-container{
         display: flex;
@@ -174,18 +184,18 @@ ul.breadcrumb li a:hover {
 
 /* Tabular view */
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation : portrait)  {
-    .goback{
-        font-size: 8px;
-    }
-
-    .breads{
-        font-size: 6px;
-    }
-
-    ul.breadcrumb li {
-        font-size: 6px;
-    }
     
+    .breads ul.breadcrumb li{
+        font-size: 12px;
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 2px;
+        color: black;
+        content: ">";
+        font-size: 12px;
+    }
+
     .image-container{
         display: flex;
         justify-content: center;

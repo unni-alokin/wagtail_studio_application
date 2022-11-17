@@ -97,14 +97,12 @@
 /* Mobile View */
 @media screen and (min-width: 150px) and (max-width: 480px){
     .main-container{
-        margin-top: 20px;
+        margin: 30px auto;
         display: flex;
         flex-direction: column;
         height: auto;
-        margin-bottom: 20px;
         align-self: center;
-        border: 0px solid;
-        box-shadow: 0px 2px gray;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 
     .main-container:nth-child(odd){
@@ -129,11 +127,12 @@
 
     .blog-description-main-container{
         width: 100%;
-        margin: 0px;
+        padding: 0px 8px;
+        margin: 10px 0;
         display: flex;  /* to make the child div centered */
         align-items: center;
         justify-content: center;
-        padding: 0px;
+ 
     }
         
     .blog-description-container{
@@ -143,13 +142,13 @@
     .blog-title{
         width: 100%;
         font-size: 15px;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 10px;
     }
 
     .blog-date{
         width: 100%;
-        font-size: 10px;
+        font-size: 8px;
         margin-bottom: 10px;
         letter-spacing: 1.18px;
         color: #a1a1a1;
@@ -161,7 +160,7 @@
         width: 100%;
         text-align: justify;
         height: auto;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 18px;
         color: #696969;
     }

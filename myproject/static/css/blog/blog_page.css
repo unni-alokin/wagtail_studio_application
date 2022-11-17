@@ -75,8 +75,9 @@ ul.breadcrumb {
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 10px;
-    font-size: 13px;
-    width: 1100px;
+    font-size: 12px;
+    font-weight: 100;
+    width: 100%;
 }
 .previous{
     width: 50%;
@@ -141,12 +142,12 @@ ul.breadcrumb {
 @media screen and (max-width: 540px) {
 
     .breads{
-        font-size: 7px;
+        font-size: 10px;
         margin-bottom: 10px;
     }
 
     ul.breadcrumb li {
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .main-details-container{
@@ -155,13 +156,13 @@ ul.breadcrumb {
     }
 
     .blog-title{
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 10px;
     }
     
     .blog-date{
-        font-size: 7px;
+        font-size: 8px;
         font-weight: 100;
         color: #a1a1a1;
         letter-spacing: 1.18px;
@@ -169,7 +170,7 @@ ul.breadcrumb {
     }
     
     .blog-description{
-        font-size: 7px;
+        font-size: 10px;
         line-height: 15px;
         margin-bottom: 10px;
     }
@@ -181,4 +182,15 @@ ul.breadcrumb {
         margin-bottom: 10px;
     }
     
+    .navigators{
+        flex-direction: row;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 70px;
+        margin-bottom: 10px;
+        font-size: 10px;
+        font-weight: 100;
+        width: 100%;
+    }
 }

@@ -19,18 +19,9 @@
             <div class="success-message">
                 {% for m in messages %}
                 <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                    <div class="success-image">
-                        
-                    </div>
                     <div class="success">
                         <p>Thank you for getting in touch!</p>
-                        <p>We appreciate you contacting us.</p> 
-                        <p>We will get back in touch with you soon!</p>
-                        <p>Have a great day!</p>
-                        <p>Still We Rise!</p>
                     </div>
-
-
                 </li>
                 {% endfor %}
             </div>
@@ -91,8 +82,10 @@
             <div class="heading">Studio</div>
 
             {% for author in mypublications  %}
-                <div class="title">{{ author.name }} : </div>
-                <div class="email">{{ author.email }} </div>
+                <div class="snippet-content">
+                    <div class="title">{{ author.name }} : </div>
+                    <div class="email">{{ author.email }} </div>
+                </div>
             {% endfor %}
         </div>
     </div>
