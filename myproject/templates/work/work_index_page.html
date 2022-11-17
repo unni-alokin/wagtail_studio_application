@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-index-page{% endblock %}
+
+{% block content %}
+    <link rel = "stylesheet" href="{%static 'css/work/work_index_page.css' %}">
+
+
+        <div class="work-container">
+            <div class="work-cards">
+                {% for post in workpages %}
+                    {% with post=post.specific %} 
+                        <div class="work-card">
+                            {% with post.thumbnail_image as main_image %}
+                                <div class="image-sub-container">
+                                    {% if main_image %}
+                                        <a href="{% pageurl post %}">
+                                            {% image main_image fill-350x300 as tmp_photo%}
+                                            <img src="{{ tmp_photo.url }}" width="{{ tmp_photo.width }}"
+                                        height="{{ tmp_photo.height }}" alt="{{ tmp_photo.alt }}" class="grid-image"></a>
+                                    </div>
+                                
+                                <div class="work-contents">
+                                    <div class="work-title"><a href="{% pageurl post %}"><p>{{ post.work_title }}</p></a></div>
+                                    <div class="work-subtitle"><a href="{% pageurl post %}"><p>{{ post.work_subtitle }}</p></a></div>
+                                </div>
+                             
+                                {% endif %}
+                                {% endwith %} 
+                            </div>  
+                        {% endwith %}
+                {% endfor %}
+            </div>
+
+
+
+
+{% endblock %}

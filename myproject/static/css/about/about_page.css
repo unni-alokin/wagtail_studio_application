@@ -44,6 +44,12 @@
     flex-direction: column;
 }
 
+.active_about{
+    color: #696969;
+    border-width: 0px 0px 1px 0px;
+    border-color: #696969;
+}
+
 .creator-name{
     padding: 8px;
     font-size: 19px;

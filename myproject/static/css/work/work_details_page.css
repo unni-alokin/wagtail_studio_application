@@ -49,7 +49,7 @@ ul.breadcrumb li a:hover {
 
 .work-images{
     width: 100%;
-    height: 500px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -135,7 +135,7 @@ ul.breadcrumb li a:hover {
 
     .work-images{
         width: 100%;
-        height: 100px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -166,9 +166,6 @@ ul.breadcrumb li a:hover {
         color: #696969;
         padding: 0px;
         margin-top: 10px;
-    }
-    .navigators{
-        display: none;
     }
 }
 
@@ -202,7 +199,7 @@ ul.breadcrumb li a:hover {
 
     .work-images{
         width: 100%;
-        height: 200px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -232,8 +229,5 @@ ul.breadcrumb li a:hover {
         color: #696969;
         padding: 0px;
         margin-top: 10px;
-    }
-    .navigators{
-        display: none;
     }
 }

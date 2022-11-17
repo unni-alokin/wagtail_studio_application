@@ -31,7 +31,7 @@
                             <div class="blog-title"><a href="{% pageurl post %}">{{ post.blog_title }}</a></div>
                             <div class="blog-date">{{ post.blog_date }}</div>
                             <div class="blog-content">
-                                <div class="blog-para">{{ post.blog_description | richtext }}</div>
+                                <div class="blog-para">{{ post.blog_abstract | richtext }}</div>
                             </div>
                             <div class="readmore"><a href="{% pageurl post %}">READ THE STORY ></a></div>
                         </div>

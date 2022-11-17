@@ -32,7 +32,14 @@
             {% endfor %}
             
             <div class="blog-description">{{ page.blog_description | richtext }}</div>
+              
+        </div>
 
+        <div class="navigators-main">
+            <div class="navigators">
+                <div class="previous"><a href="{{ page.prev_portrait }}"><b>< Prev</b>  </a></div>
+                <div class="next"><a href="{{ page.next_portrait }}"><b>Next > </b></a></div>
+            </div>
         </div>
 
 

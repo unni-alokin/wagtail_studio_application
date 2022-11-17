@@ -39,26 +39,34 @@
         <div class="main">
             <div class = "navbar">
                     
-                <a href = "" class = "nav-branding">
+                <a href = "/work/" class = "nav-branding">
                     <img class="brandlogo" src="{% static 'assests/Logo.png'%}" >
                 </a>
                     
                 <ul class = "nav-menu">
                         
                     <li class = "nav-item">
-                        <a href = "{% url 'work' %}" class = "nav-link">WORK</a>
+                        <a href = "/work/" class = "nav-link">
+                            <div class="active_work">WORK</div>
+                        </a>
                     </li>
                         
                     <li class = "nav-item">
-                        <a href = "{% url 'blog' %}" class = "nav-link">BLOG</a>
+                        <a href = "/blog/" class = "nav-link">
+                            <div class="active_blog">BLOG</div>
+                        </a>
                     </li>
                         
                     <li class = "nav-item">
-                        <a href = "{% url 'about' %}" class = "nav-link">ABOUT</a>
+                        <a href = "/about/" class = "nav-link">
+                            <div class="active_about">ABOUT</div>
+                        </a>
                     </li>
                         
                     <li class = "nav-item">
-                        <a href = "{% url 'contact' %}"  class = "nav-link">CONTACT</a>
+                        <a href = "/contact/"  class = "nav-link">
+                            <div class="active_contact">CONTACT</div>
+                        </a>
                     </li>
 
                 </ul>
@@ -75,6 +83,7 @@
             {% block content %}{% endblock %}
         </div>
 
+        
 
 
         {# Global javascript #}

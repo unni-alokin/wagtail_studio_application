@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "home",
     "search",
     "studio",
+    'ckeditor',
 
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
@@ -67,7 +68,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             os.path.join(PROJECT_DIR, "templates"),
-            os.path.join(BASE_DIR, "home", "templates" ),
+            os.path.join(BASE_DIR, "myproject", "templates" ),
         ],
         "APP_DIRS": True,
         "OPTIONS": {

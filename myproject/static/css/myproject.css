@@ -1,7 +1,6 @@
 body{
     scroll-behavior: smooth;
     font-family: 'Gotham Book', sans-serif;
-    height: 1000px;
 }
 
 *{
@@ -77,6 +76,23 @@ a{
     border-color: #696969;
 
 }
+
+.active_work, .active_blog, .active_about, .active_contact{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid transparent;
+    border-width: 0px 0px 1px 0px;
+    color: black;
+}
+
+.active_work:hover, .active_blog:hover, .active_about:hover, .active_contact:hover{
+    padding-bottom: 5px;
+    color: #696969;
+    border-width: 0px 0px 1px 0px;
+    border-color: #696969;
+}
+
+
 
 ul{
     list-style-type: none; 

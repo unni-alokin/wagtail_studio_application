@@ -14,9 +14,29 @@
     <div class="contact-container">
         <div class="form-container">
 
+            <!-- <div class="getintouch">Get in touch</div> -->
+            {% if messages %}
+            <div class="success-message">
+                {% for m in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    <div class="success-image">
+                        
+                    </div>
+                    <div class="success">
+                        <p>Thank you for getting in touch!</p>
+                        <p>We appreciate you contacting us.</p> 
+                        <p>We will get back in touch with you soon!</p>
+                        <p>Have a great day!</p>
+                        <p>Still We Rise!</p>
+                    </div>
+
+
+                </li>
+                {% endfor %}
+            </div>
+            {% else %}
             <div class="getintouch">Get in touch</div>
 
-            {% if flag != 1 %}
                 <form action="" method="POST" class="form">
                     {% csrf_token %}
                                 
@@ -60,12 +80,7 @@
 
                 </form>
             {% endif %}
-            {% if flag == 1 %}
-                <div class="success">
-                    <h3>Thank you </h3>
-                    <p>Will get back soon</p>
-                </div>
-            {% endif %}
+ 
 
             
         </div>
@@ -74,8 +89,11 @@
     <div class="snippet-container">
         <div class="snippets">
             <div class="heading">Studio</div>
-            <div class="title">General Inquires:</div>
-            <div class="email">hello@thisaddress.com</div>
+
+            {% for author in mypublications  %}
+                <div class="title">{{ author.name }} : </div>
+                <div class="email">{{ author.email }} </div>
+            {% endfor %}
         </div>
     </div>
 

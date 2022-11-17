@@ -7,7 +7,7 @@ from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
-
+ 
 from studio import urls as studio_urls
 
 urlpatterns = [

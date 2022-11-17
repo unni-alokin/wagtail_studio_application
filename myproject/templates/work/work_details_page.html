@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<link rel = "stylesheet" href="{%static 'css/work/work_details_page.css' %}">
+
+    <div class="main-container">
+
+        <!-- <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p> -->
+        <div class="breads">
+            <ul class="breadcrumb">
+                <li><a href="{{ page.get_parent.url }}">Work</a></li>
+                <li class="selected">{{ page.work_title }}</li>
+              </ul>
+        </div> 
+        {% for item in page.gallery_images.all %}
+        <div class="image-container">
+            <div class="image-sub-container">
+                {% image item.image original as tmp_photo%}
+                <img src="{{ tmp_photo.url }}" width="{{ tmp_photo.width }}"
+                height="{{ tmp_photo.height }}" alt="{{ tmp_photo.alt }}" class="work-images">
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="details-container">
+            <div class="details-sub-container">
+                <div class="work-title"><h4>{{ page.work_title }}</h4></div>
+                <div class="work-description"> <p>{{ page.work_description |richtext}}</p></div>
+            </div>
+        </div>
+
+        <div class="navigators-main">
+            <div class="navigators">
+                <div class="previous"><a href="{{ page.prev_portrait }}"><b>< Prev</b>  </a></div>
+                <div class="next"><a href="{{ page.next_portrait }}"><b>Next > </b></a></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

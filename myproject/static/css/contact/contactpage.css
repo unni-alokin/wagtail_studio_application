@@ -9,6 +9,25 @@
     display: flex;
 }
 
+.active_contact{
+    color: black;
+    border-width: 0px 0px 1px 0px;
+    border-color: #696969;
+}
+
+.active_blog, .active_about, .active_work{
+    color: #696969;
+}
+
+li{
+    list-style: none;
+}
+
+.success-message li{
+    font-size: 20px;
+    color: purple;   
+}
+
 .contact-container{
     width: 60%;
     display: flex;
@@ -129,7 +148,117 @@ li{
         font-weight: 700;
         margin-bottom: 20px;
     }
+
+    .success-message li{
+        font-size: 15px;
+        color: purple;   
+    }
     
+    .form{
+        font-size: 10px;
+    }
+    
+    .field{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+
+    .form-name, .form-email, .form-subject, .form-message{
+        width: 100%;
+        margin: 0px;
+        border-width: 0px 0px 1px 0px;
+        border-color: #1C1C1C;
+        resize: vertical;
+        background-color: transparent;
+        font-size: 10px;
+        height: 25px;
+    }
+
+    .form-message{
+        height: 50px;
+    }
+    
+    ::placeholder{
+        font-size: 10px;
+        padding: 5px 0px 5px 0px;
+        color: #696969;
+    }
+    
+    li{
+        font-size: 8px;
+    }
+
+    .submit{
+        margin: 15px 0px 15px 0px;
+        width: 50px;
+        height: 20px;
+        background-color: white;
+        border: 1px solid #696969;
+        font-size: 8px;
+    }
+
+    .snippet-container{
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .snippets{
+        width: 100%;
+    }
+
+    .heading{
+        font-weight: 900;
+        font-size: 10px;
+        line-height: 23px;
+        color: #1C1C1C;
+        padding: 10px 0;
+    }
+
+    .title{
+        font-weight: 900;
+        font-size: 8px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+    .email{
+        font-size: 8px;
+        color: #696969;
+        padding: 4px 0;
+    }
+
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 480px){
+    .main-contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-container{
+        width: 100%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .getintouch{
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    
+    .success-message li{
+        font-size: 15px;
+        color: rgb(56, 114, 30);   
+    }
+
     .form{
         font-size: 10px;
     }
